@@ -1,37 +1,48 @@
-# KameraFux 0.2.0.0
+# KameraFux 0.2.1.0
 
-KameraFux verschiebt die aktive Außenkamera eines Fahrzeugs zusätzlich über
-den Ziffernblock. Die normale Maussteuerung, das Mausrad, WASD und die
-AutoDrive-Mausbedienung bleiben unverändert.
+KameraFux adds independent movement to the active third-person vehicle camera
+in Farming Simulator 25. Mouse look, mouse-wheel zoom, vehicle controls and
+AutoDrive controls remain unchanged.
 
-## Steuerung
+## Controls
 
-| Taste | Funktion |
+| Default key | Action |
 |---|---|
-| Num 8 / Num 2 | Vor / zurück |
-| Num 4 / Num 6 | Links / rechts |
-| Num 9 / Num 3 | Hoch / runter |
-| Num 0 | Zusatzversatz zurücksetzen |
+| Numpad 8 / Numpad 2 | Move forward / backward |
+| Numpad 4 / Numpad 6 | Move left / right |
+| Numpad 9 / Numpad 3 | Move up / down |
+| Numpad 0 | Reset the additional camera offset |
 
-Die Bewegung funktioniert nur in einer Fahrzeug-Außenkamera. Innenkameras
-werden absichtlich nicht verändert. NumLock muss gegebenenfalls aktiviert sein.
+These are only the default bindings. Every KameraFux action can be reassigned
+in the regular Farming Simulator menu under **Settings → Controls → Vehicle**.
+This also makes the mod usable on laptops without a numeric keypad.
 
-Version 0.2 registriert die Eingaben direkt an der jeweils aktiven
-Fahrzeugkamera. Das entspricht dem von aktuellen FS25-Kameramods verwendeten
-Lebenszyklus und vermeidet verlorene Fahrzeug-Callbacks.
+Camera movement is intentionally limited to exterior vehicle cameras. Num Lock
+may need to be enabled when using the default bindings.
 
 ## Installation
 
-`FS25_KameraFux.zip` unverändert nach
-`Dokumente/My Games/FarmingSimulator2025/mods` kopieren und im Spielstand
-aktivieren.
+1. Download or build `FS25_KameraFux.zip`.
+2. Copy the ZIP without extracting it to
+   `Documents/My Games/FarmingSimulator2025/mods`.
+3. Enable KameraFux when loading the savegame.
+4. Reassign its controls in **Settings → Controls → Vehicle** if desired.
 
-## Teststatus
+## Building the mod ZIP
 
-Die ZIP-, XML- und Lua-Struktur wurde statisch geprüft. Ein echter Lauf in LS25
-ist für diese erste Version noch erforderlich. Falls der Mod nicht reagiert oder
-Fehler erzeugt, bitte `log.txt` aus dem FarmingSimulator2025-Ordner bereitstellen.
+Create a ZIP containing the files from the repository root. `modDesc.xml` must
+be located directly at the root of the archive, not inside an additional
+folder.
 
-## Lizenz
+## Compatibility and test status
 
-MIT, siehe `LICENSE`.
+Version 0.2 registers its actions directly on the active FS25 vehicle camera.
+The mod has been tested successfully in Farming Simulator 25. It is currently
+intended for single-player use.
+
+If the mod does not react, check `log.txt` in the Farming Simulator 2025 user
+directory for entries beginning with `[FS25_KameraFux]`.
+
+## License
+
+MIT. See `LICENSE`.
