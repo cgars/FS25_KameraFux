@@ -1,4 +1,4 @@
--- KameraFux 0.2.0.0
+-- KameraFux 0.2.1.0
 -- Adds a world-space offset to the active exterior VehicleCamera.
 
 KameraFux = {}
@@ -145,4 +145,4 @@ end)
 
 VehicleCamera.onActivate = Utils.appendedFunction(VehicleCamera.onActivate, registerCameraActions)
 
-Logging.info("[%s] KameraFux 0.2.0.0 loaded", KameraFux.MOD_NAME)
+Logging.info("[%s] KameraFux 0.2.1.0 loaded", KameraFux.MOD_NAME)
