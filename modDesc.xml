@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="111">
+    <author>Christian Garbers &amp; OpenAI</author>
+    <version>0.2.0.0</version>
+
+    <title>
+        <en>KameraFux</en>
+        <de>KameraFux</de>
+    </title>
+
+    <description>
+        <en><![CDATA[
+Moves the active third-person vehicle camera with the numeric keypad while
+leaving mouse look, zoom, vehicle controls and AutoDrive input untouched.
+
+Num 8 / 2: forward / backward
+Num 4 / 6: left / right
+Num 9 / 3: up / down
+Num 0: reset camera offset
+        ]]></en>
+        <de><![CDATA[
+Verschiebt die aktive Fahrzeug-Außenkamera mit dem Ziffernblock. Maussteuerung,
+Zoom, Fahrzeugsteuerung und AutoDrive-Eingaben bleiben unverändert.
+
+Num 8 / 2: vor / zurück
+Num 4 / 6: links / rechts
+Num 9 / 3: hoch / runter
+Num 0: Kameraversatz zurücksetzen
+        ]]></de>
+    </description>
+
+    <iconFilename>icon_KameraFux.dds</iconFilename>
+    <multiplayer supported="false"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="src/KameraFux.lua"/>
+    </extraSourceFiles>
+
+    <l10n>
+        <text name="input_KameraFuxMoveForwardBack_1">
+            <en>Move camera forward</en>
+            <de>Kamera vorwärts bewegen</de>
+        </text>
+        <text name="input_KameraFuxMoveForwardBack_2">
+            <en>Move camera backward</en>
+            <de>Kamera rückwärts bewegen</de>
+        </text>
+        <text name="input_KameraFuxMoveLeftRight_1">
+            <en>Move camera right</en>
+            <de>Kamera nach rechts bewegen</de>
+        </text>
+        <text name="input_KameraFuxMoveLeftRight_2">
+            <en>Move camera left</en>
+            <de>Kamera nach links bewegen</de>
+        </text>
+        <text name="input_KameraFuxMoveUpDown_1">
+            <en>Move camera up</en>
+            <de>Kamera nach oben bewegen</de>
+        </text>
+        <text name="input_KameraFuxMoveUpDown_2">
+            <en>Move camera down</en>
+            <de>Kamera nach unten bewegen</de>
+        </text>
+        <text name="input_KameraFuxReset">
+            <en>Reset camera offset</en>
+            <de>Kameraversatz zurücksetzen</de>
+        </text>
+    </l10n>
+
+    <inputBinding>
+        <actionBinding action="KameraFuxMoveForwardBack">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_8" axisComponent="+" neutralInput="0" index="1"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_2" axisComponent="-" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="KameraFuxMoveLeftRight">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_6" axisComponent="+" neutralInput="0" index="1"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_4" axisComponent="-" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="KameraFuxMoveUpDown">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_9" axisComponent="+" neutralInput="0" index="1"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_3" axisComponent="-" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="KameraFuxReset">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_0" index="1"/>
+        </actionBinding>
+    </inputBinding>
+
+    <actions>
+        <action name="KameraFuxMoveForwardBack" category="VEHICLE" axisType="FULL"/>
+        <action name="KameraFuxMoveLeftRight" category="VEHICLE" axisType="FULL"/>
+        <action name="KameraFuxMoveUpDown" category="VEHICLE" axisType="FULL"/>
+        <action name="KameraFuxReset" category="VEHICLE"/>
+    </actions>
+</modDesc>
